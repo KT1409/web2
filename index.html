@@ -98,7 +98,7 @@
             display: flex;
             justify-content: center;
         }   
-        .banner img {
+        .banner img,.banner1 img {
             width: 92%;
             max-height: 150px;
             object-fit: cover;
@@ -254,7 +254,7 @@
             color: #777;
         }
         .app-links {
-            display: flex;
+            display: inline-block;
             gap: 10px; 
             margin-top: 10px; 
         }
@@ -273,7 +273,76 @@
             width: 30px; 
             height: 30px; 
             object-fit: contain; 
+        } 
+        
+        @media (max-width: 768px) {
+        .navbar {
+            padding: 10px;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .navbar-nav a {
+            margin-left: 0;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .form-inline {
+            margin-left: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .icon-container {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .icon-container a {
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .small-banner-row img
+        {
+            flex: 1;
+            width: 80%;
+            max-width: 290px; 
+            margin: 0 13px; 
         }        
+        .notification-container 
+        {
+            bottom: 20vh; 
+        }
+
+        .notification-rectangle {
+            width: 30px;
+            height: 200px;
+            font-size: 14px;
+        }
+
+        .rotated-text {
+            font-size: 16px;
+        }
+        .footer-section {
+            flex-direction: column; 
+            align-items: flex-start; 
+            font-size: 10px; 
+        }
+
+        .footer-column {
+            width: 100%; 
+            margin-bottom: 20px;
+        }
+        
+    }     
         
     </style>
 </head>
@@ -339,7 +408,7 @@
     <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/8/1/4d7fa105-1f84-4ef4-a1cb-7363e5880b3a1722489426194-DESKTOP-HP-BANNER_02.jpg" alt="Second Banner 2">
 </div>
 
-<div class="banner">
+<div class="banner1">
     <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/05d2bb14-c9fe-4c33-912b-d2546d5248331719638966192-COUPONS-CORNER.jpg" alt="First Banner">
 </div>
 
@@ -359,7 +428,7 @@
     <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/6cc45c3b-a673-4acb-8702-5168d1fd35ff1721730989859-Card_23.png" alt="Card 23">
 </div>
 <br/><br/>
-<div class="banner">
+<div class="banner3">
     <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/28/37fcd37a-16f3-4d0b-94dc-b2b7fbe3dd631719556246029-Shop-By-Category.jpg" alt="First Banner">
 </div>
 <div class="category">
@@ -420,7 +489,7 @@
 </div>
 <br/><br/>
 <div class="footer-section">
-    <div class="footer-column">
+    <div class="footer-column" id="usefullinks">
         <h2>ONLINE SHOPPING</h2>
         <ul>
             <li><a href="#">Men</a></li>
@@ -457,7 +526,7 @@
             <li><a href="#">Grievance Officer</a></li>
         </ul>
     </div>
-    <div class="footer-column">
+    <div class="footer-column" id="experience-myntra-app">
         <h2>EXPERIENCE MYNTRA APP ON MOBILE</h2>
         <div class="app-links">
             <a href="#"><img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="Google Play"></a>
@@ -472,7 +541,7 @@
             <a href="#"><img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" alt="Instagram"></a>
         </div>
     </div>
-    <div class="footer-column">
+    <div class="footer-column" id="refund-policy">
         <p>100% ORIGINAL guarantee for all products at myntra.com</p>
         <p>Return within 14 days of receiving your order</p>
     </div>
@@ -493,5 +562,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>
