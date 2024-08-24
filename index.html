@@ -1,311 +1,367 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&display=swap');
-        
-        body {
-            font-family: 'Assistant', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-            font-weight: bolder;
-        }
-        
-        .navbar-brand img {
-            width: 50px;
-        }
-        .nav-item {
-            padding-left: 45px;
-        }
-        .navbar-nav a {
-            color: #282c3f;
-            font-size: 13.5px;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-        .form-inline .input-group {
-            width: 400px;
-        }
-        .form-inline .input-group-text {
-            background: transparent;
-            border: none;
-            color: #999;
-            font-size: 18px;
-            padding: 0 10px;
-        }
-        .input-group .input-group-prepend {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-        }
-        .input-group .form-control {
-            padding-left: 40px;
-            background-color: #f5f5f6;
-            font-size: 12px;
-        }
-        .navbar-nav .nav-link sup {
-            font-size: 14px;
-            color: red; 
-            vertical-align: top;
-            margin-left: 2px;
-        }
-        .icon-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 200px;
-            margin-left: 20px;
-        }
-        .icon-container a {
-            text-align: center;
-            color: #282c3f;
-            text-decoration: none;
-        }
-        .icon-container i {
-            font-size: 20px;
-            color: #282c3f;
-        }
-        .icon-container p {
-            margin: 0;
-            font-size: 12px;
-            color: #282c3f;
-        }
+ <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        .banner{
-            display: flex;
-            justify-content: center;
-        }
-        .banner2 img {
-            width: 100%;
-            max-height: 150px;
-            object-fit: cover;
-        } 
-        .banner3 img {
-            width: 100%;
-            object-fit: fill;
-            display: flex;
-            justify-content: center;
-        }   
-        .banner img,.banner1 img {
-            width: 92%;
-            max-height: 150px;
-            object-fit: cover;
-        }
-        .banner-row {
-            display: flex;
-        }
-        .banner-row img {
-            width: 50%;
-        }
-        .banner-row1 {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .banner-row1 img {
-            width: 50%;
-            margin-right: 10px; 
-        }
-        .banner-row1 img:last-child {
-            margin-right: 0; 
-        }
-        .notification-container {
-            position: fixed;
-            bottom: 10vh; 
-            right: 0; 
-            z-index: 1000; 
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        .notification-rectangle {
-            background-color: #535766;
-            color: #ffffff;
-            border: 2px solid #282c3f;
+
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&display=swap');
+    
+    body
+    {
+        font-family: 'Assistant', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        font-weight: bolder;
+    }
+    
+    .navbar-brand img
+    {
+        width: 50px;
+    }
+    .nav-item
+    {
+        padding-left: 45px;
+    }
+    .navbar-nav a
+    {
+        color: #282c3f;
+        font-size: 13.5px;
+    }
+    .navbar
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    .form-inline .input-group
+    {
+        width: 400px;
+    }
+    .form-inline .input-group-text
+    {
+        background: transparent;
+        border: none;
+        color: #999;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    .input-group .input-group-prepend
+    {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    .input-group .form-control
+    {
+        padding-left: 40px;
+        background-color: #f5f5f6;
+        font-size: 12px;
+    }
+    .navbar-nav .nav-link sup
+    {
+        font-size: 14px;
+        color: red; 
+        vertical-align: top;
+        margin-left: 2px;
+    }
+    .icon-container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+        margin-left: 20px;
+    }
+    .icon-container a
+    {
+        text-align: center;
+        color: #282c3f;
+        text-decoration: none;
+    }
+    .icon-container i
+    {
+        font-size: 20px;
+        color: #282c3f;
+    }
+    .icon-container p
+    {
+        margin: 0;
+        font-size: 12px;
+        color: #282c3f;
+    }
+
+    .banner
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .banner2 img
+    {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+    } 
+    .banner3 img
+    {
+        width: 100%;
+        object-fit: fill;
+        display: flex;
+        justify-content: center;
+    } 
+    .banner img,.banner1 img
+    {
+        width: 92%;
+        max-height: 150px;
+        object-fit: cover;
+    }
+    .banner-row
+    {
+        display: flex;
+    }
+    .banner-row img
+    {
+        width: 50%;
+    }
+    .banner-row1
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .banner-row1 img
+    {
+        width: 50%;
+        margin-right: 10px; 
+    }
+    .banner-row1 img:last-child
+    {
+        margin-right: 0; 
+    }
+    .notification-container
+    {
+        position: fixed;
+        bottom: 10vh; 
+        right: 0; 
+        z-index: 1000; 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .notification-rectangle
+    {
+        background-color: #535766;
+        color: #ffffff;
+        border: 2px solid #282c3f;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        width: 40px; 
+        height: 290px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        position: relative; 
+    }
+    .rotated-text-container
+    {
+        position: relative;
+    }
+    .rotated-text
+    {
+        display: block;
+        transform: rotate(-90deg); 
+        transform-origin: center center; 
+        white-space: nowrap;
+        font-size: 24px;
+    }
+    .triangle
+    {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid white;
+        position: absolute;
+        top: 50%;
+        right: 0px; 
+        transform: translate(100%, -50%);
+    }
+    .notification-bell
+    {
+        background-color: #007bff;
+        border: 2px solid #ffffff;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: start;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .small-banner-row
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .small-banner-row img
+    {
+        flex: 1;
+        width: 80%;
+        max-width: 290px; 
+        margin: 0 8px; 
+    }
+    .image-banner
+    {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        padding:0px;
+        overflow: hidden;
+    }
+    .image-banner a
+    {
+        margin: 0 px; 
+    }
+    .image-banner img
+    {
+        width: 100%;
+        max-width: 400px; 
+    }
+    .footer-section
+    {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        background-color: #f8f8f8;
+    }
+
+    .footer-column
+    {
+        width: 18%;
+        margin-left:40px;
+        margin-bottom: 20px;
+    }
+
+    .footer-column h2
+    {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color:black;
+        font-weight: bolder;
+    }
+
+    .footer-column ul
+    {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column ul li
+    {
+        margin-bottom: 5px;
+    }
+
+    .footer-column ul li a
+    {
+        text-decoration: none;
+        color: #696B79;
+        font-weight:lighter;
+    }
+
+    .footer-notes
+    {
+        padding: 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .footer-notes p
+    {
+        margin: 5px 0;
+        color: #777;
+    }
+    .app-links
+    {
+        display: inline-block;
+        gap: 10px; 
+        margin-top: 10px; 
+    }
+
+    .app-links a img
+    {
+        width: 120px;
+        height: 40px;
+        object-fit: contain;
+    }
+    .social-media-links
+    {
+        display: flex;
+        gap: 10px; 
+        margin-top: 10px; 
+    }
+    .social-media-links a img
+    {
+        width: 30px; 
+        height: 30px; 
+        object-fit: contain; 
+    } 
+    
+    @media (max-width: 768px)
+    {
+        .navbar
+        {
             padding: 10px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            width: 40px; 
-            height: 290px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
-            margin: 0;
-            position: relative; 
-        }
-        .rotated-text-container {
-            position: relative;
-        }
-        .rotated-text {
-            display: block;
-            transform: rotate(-90deg); 
-            transform-origin: center center; 
-            white-space: nowrap;
-            font-size: 24px;
-        }
-        .triangle {
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-	        border-right: 15px solid transparent;
-	        border-bottom: 15px solid white;
-            position: absolute;
-            top: 50%;
-            right: 0px; 
-            transform: translate(100%, -50%);
-        }
-        .notification-bell {
-            background-color: #007bff;
-            border: 2px solid #ffffff;
-            color: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            flex-direction: start;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .small-banner-row {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            overflow: hidden;
-        }
-        .small-banner-row img {
-            flex: 1;
-            width: 80%;
-            max-width: 290px; 
-            margin: 0 8px; 
-        }
-        .image-banner {
-            display: flex;
-            justify-content: space-between;
-            margin: 0px;
-            padding:0px;
-            overflow: hidden;
-        }
-        .image-banner a {
-            margin: 0 px; 
-        }
-        .image-banner img {
-            width: 100%;
-            max-width: 400px; 
-        }
-        .footer-section {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 20px;
-            background-color: #f8f8f8;
         }
 
-        .footer-column {
-            width: 18%;
-            margin-left:40px;
-            margin-bottom: 20px;
-        }
-
-        .footer-column h2 {
-            font-size: 12px;
-            margin-bottom: 10px;
-            color:black;
-            font-weight: bolder;
-        }
-
-        .footer-column ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 5px;
-        }
-
-        .footer-column ul li a {
-            text-decoration: none;
-            color: #696B79;
-            font-weight:lighter;
-        }
-
-        .footer-notes {
-            padding: 20px;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .footer-notes p {
-            margin: 5px 0;
-            color: #777;
-        }
-        .app-links {
-            display: inline-block;
-            gap: 10px; 
-            margin-top: 10px; 
-        }
-
-        .app-links a img {
-            width: 120px;
-            height: 40px;
-            object-fit: contain;
-        }
-        .social-media-links {
-            display: flex;
-            gap: 10px; 
-            margin-top: 10px; 
-        }
-        .social-media-links a img {
-            width: 30px; 
-            height: 30px; 
-            object-fit: contain; 
-        } 
-        
-        @media (max-width: 768px) {
-        .navbar {
-            padding: 10px;
-        }
-
-        .navbar-nav {
+        .navbar-nav
+        {
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
         }
 
-        .navbar-nav a {
+        .navbar-nav a
+        {
             margin-left: 0;
             margin-bottom: 10px;
             width: 100%;
             text-align: left;
         }
 
-        .form-inline {
+        .form-inline
+        {
             margin-left: 0;
             width: 100%;
             justify-content: space-between;
         }
 
-        .icon-container {
+        .icon-container
+        {
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
         }
 
-        .icon-container a {
+        .icon-container a
+        {
             margin-bottom: 10px;
             width: 100%;
             text-align: left;
@@ -316,7 +372,7 @@
             width: 80%;
             max-width: 290px; 
             margin: 0 13px; 
-        }        
+        } 
         .notification-container 
         {
             bottom: 20vh; 
@@ -342,96 +398,103 @@
             margin-bottom: 20px;
         }
         
-    }     
-        
-    </style>
+        } 
+        @media (max-width: 992px) {
+        .icon-container {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .icon-container a {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-inline {
+            margin-top: 10px;
+        }
+    }
+ </style>
 </head>
 <body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <a class="navbar-brand" href="#">
+    <img src="https://cdn.iconscout.com/icon/free/png-256/free-myntra-2709168-2249158.png?f=webp&w=256" alt="Logo" style="height: 30px;">
+ </a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
 
-<nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-myntra-2709168-2249158.png?f=webp&w=256" alt="Logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">MEN</a>
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">MEN</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">WOMEN</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">KIDS</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">HOME & LIVING</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">BEAUTY</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">STUDIO<sup>NEW</sup></a>
             </li>
         </ul>
-        &ensp;&emsp;&emsp;
-        <form class="form-inline">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                &ensp;
-                <input class="form-control" type="search" placeholder="Search for products, brands and more" aria-label="Search">
-            </div>
-        </form>
-        &emsp;&ensp;
-        <div class="icon-container">
-            <a href="#"><i class="fas fa-user"></i><p>Profile</p></a>
-            <a href="#"><i class="fas fa-heart"></i><p>Wishlist</p></a>
-            <a href="#"><i class="fas fa-shopping-bag"></i><p>Bag</p></a>
+    <form class="d-flex ms-auto">
+        <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <input class="form-control" type="search" placeholder="Search for products, brands and more" aria-label="Search">
         </div>
+    </form>
+    <div class="icon-container d-flex ms-3">
+        <a href="#"><i class="fas fa-user"></i><p>Profile</p></a>
+        <a href="#"><i class="fas fa-heart"></i><p>Wishlist</p></a>
+        <a href="#"><i class="fas fa-shopping-bag"></i><p>Bag</p></a>
     </div>
-</nav>
-&emsp;&emsp;
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="banner">
-    <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/31/e45ca76c-d5ec-40f6-919f-630ae21d15dd1722406389285-FLAT-300-Off-on-1st-Purchase-Strip-----2.jpg" alt="First Banner">
-</div>
+    </div>
+    </nav>
+    &emsp;&emsp;
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="banner">
+        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/31/e45ca76c-d5ec-40f6-919f-630ae21d15dd1722406389285-FLAT-300-Off-on-1st-Purchase-Strip-----2.jpg" alt="First Banner">
+    </div>
 
-<div class="banner-row">
-    <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/8/1/0c4d8d46-8caa-44ce-af0a-f1e48fa0fff11722489426174-DESKTOP-HP-BANNER_01.jpg" alt="Second Banner 1">
-    <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/8/1/4d7fa105-1f84-4ef4-a1cb-7363e5880b3a1722489426194-DESKTOP-HP-BANNER_02.jpg" alt="Second Banner 2">
-</div>
+    <div class="banner-row">
+        <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/8/1/0c4d8d46-8caa-44ce-af0a-f1e48fa0fff11722489426174-DESKTOP-HP-BANNER_01.jpg" alt="Second Banner 1">
+        <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/8/1/4d7fa105-1f84-4ef4-a1cb-7363e5880b3a1722489426194-DESKTOP-HP-BANNER_02.jpg" alt="Second Banner 2">
+    </div>
 
-<div class="banner1">
-    <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/05d2bb14-c9fe-4c33-912b-d2546d5248331719638966192-COUPONS-CORNER.jpg" alt="First Banner">
-</div>
+    <div class="banner1">
+        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/05d2bb14-c9fe-4c33-912b-d2546d5248331719638966192-COUPONS-CORNER.jpg" alt="First Banner">
+    </div>
 
-<div class="banner-row1">
-    <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/24/a2d4f9b9-a5cc-491e-a1ed-9a05599eb3541721820321737-MYNTRA100.jpg" alt="Myntra 100">
-    <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/24/31b72b6d-7508-449b-bac5-d6db38331bc01721820321709-MYNTRA200.jpg" alt="Myntra 200">
-</div>
+    <div class="banner-row1">
+        <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/24/a2d4f9b9-a5cc-491e-a1ed-9a05599eb3541721820321737-MYNTRA100.jpg" alt="Myntra 100">
+        <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/24/31b72b6d-7508-449b-bac5-d6db38331bc01721820321709-MYNTRA200.jpg" alt="Myntra 200">
+    </div>
 
-<div class="banner2">
-    <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/1e6355e9-3378-4bd2-8e89-b204fa8795681719638966218-Crazy-Deals.jpg" alt="First Banner">
-</div>
-<div class="small-banner-row">
-    <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/c6ffd265-fe8e-4355-9eec-3eb390406a161721730989822-Card_14.png" alt="Card 14">
-    <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/100625b9-a71d-4722-b9ca-d62bfed9c1dd1721730988534-Card_15.png" alt="Card 15">
-    <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/13f52f5b-7bf9-46da-bdb2-836a838013dd1721730989057-Card_16.png" alt="Card 16">
-    <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/0b1b1de5-c5d5-4f77-81c5-5dc3980219d81721730988641-Card_17.png" alt="Card 17">
-    <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/6cc45c3b-a673-4acb-8702-5168d1fd35ff1721730989859-Card_23.png" alt="Card 23">
-</div>
-<br/><br/>
-<div class="banner3">
-    <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/28/37fcd37a-16f3-4d0b-94dc-b2b7fbe3dd631719556246029-Shop-By-Category.jpg" alt="First Banner">
-</div>
-<div class="category">
+    <div class="banner2">
+        <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/1e6355e9-3378-4bd2-8e89-b204fa8795681719638966218-Crazy-Deals.jpg" alt="First Banner">
+        </div>
+        <div class="small-banner-row">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/c6ffd265-fe8e-4355-9eec-3eb390406a161721730989822-Card_14.png" alt="Card 14">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/100625b9-a71d-4722-b9ca-d62bfed9c1dd1721730988534-Card_15.png" alt="Card 15">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/13f52f5b-7bf9-46da-bdb2-836a838013dd1721730989057-Card_16.png" alt="Card 16">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/0b1b1de5-c5d5-4f77-81c5-5dc3980219d81721730988641-Card_17.png" alt="Card 17">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/6cc45c3b-a673-4acb-8702-5168d1fd35ff1721730989859-Card_23.png" alt="Card 23">
+    </div>
+    <br/><br/>
+    <div class="banner3">
+        <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/28/37fcd37a-16f3-4d0b-94dc-b2b7fbe3dd631719556246029-Shop-By-Category.jpg" alt="First Banner">
+    </div>
+ <div class="category">
     <div class="image-banner">
         <a href="#"><img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/3043accc-cee8-4244-8ad2-498ddd006da61719639862444-Shop-By-Category_HP_02.jpg" alt="Category 1"></a>
         <a href="#"><img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/615b5751-52a5-4be4-acc9-f6f8cd3bc8a11719639862466-Shop-By-Category_HP_03.jpg" alt="Category 2"></a>
@@ -483,13 +546,13 @@
         <a href="#"><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/13ef531f-80f2-4f15-a537-7ff56e6ea3751719639863222-Shop-By-Category_HP_35.jpg" alt="Category 35"></a>
         <a href="#"><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/bdd28ee8-8355-4db9-9026-6f5ab9a85fe01719639863246-Shop-By-Category_HP_36.jpg" alt="Category 36"></a>
     </div>
-</div>
-<div class="banner3">
+ </div>
+    <div class="banner3">
     <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/29/152cc50f-dd16-4f20-93e8-1416fe0f06c51719638676181-App-Install-Banner.jpg" alt="First Banner">
-</div>
-<br/><br/>
-<div class="footer-section">
-    <div class="footer-column" id="usefullinks">
+    </div>
+    <br/><br/>
+    <div class="footer-section">
+        <div class="footer-column" id="usefullinks">
         <h2>ONLINE SHOPPING</h2>
         <ul>
             <li><a href="#">Men</a></li>
@@ -512,7 +575,7 @@
         </ul>
     </div>
     <div class="footer-column">
-        <h2>CUSTOMER POLICIES</h2>
+    <h2>CUSTOMER POLICIES</h2>
         <ul>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">FAQ</a></li>
@@ -526,43 +589,42 @@
             <li><a href="#">Grievance Officer</a></li>
         </ul>
     </div>
-    <div class="footer-column" id="experience-myntra-app">
-        <h2>EXPERIENCE MYNTRA APP ON MOBILE</h2>
-        <div class="app-links">
-            <a href="#"><img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="Google Play"></a>
-            <a href="#"><img src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" alt="Apple Store"></a>
-        </div>
-        <br/>
-        <h2>KEEP IN TOUCH</h2>
-        <div class="social-media-links">
-            <a href="#"><img src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png" alt="Facebook"></a>
-            <a href="#"><img src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png" alt="YouTube"></a>
-            <a href="#"><img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" alt="Instagram"></a>
-        </div>
+ <div class="footer-column" id="experience-myntra-app">
+    <h2>EXPERIENCE MYNTRA APP ON MOBILE</h2>
+    <div class="app-links">
+        <a href="#"><img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="Google Play"></a>
+        <a href="#"><img src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" alt="Apple Store"></a>
+    </div>
+    <br/>
+    <h2>KEEP IN TOUCH</h2>
+    <div class="social-media-links">
+        <a href="#"><img src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png" alt="Facebook"></a>
+        <a href="#"><img src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png" alt="YouTube"></a>
+        <a href="#"><img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" alt="Instagram"></a>
+    </div>
     </div>
     <div class="footer-column" id="refund-policy">
         <p>100% ORIGINAL guarantee for all products at myntra.com</p>
         <p>Return within 14 days of receiving your order</p>
     </div>
     
-</div>
+    </div>
 
-<div class="notification-container">
-    <div class="notification-rectangle">
+    <div class="notification-container">
+        <div class="notification-rectangle">
         <div class="rotated-text-container">
             <span class="rotated-text">FLAT ₹300 OFF&ensp;&emsp; <span class="triangle"></span></span>
         </div>
+        </div>
+        <div class="notification-bell">
+            <i class="fas fa-bell"></i>
+        </div>
     </div>
-    <div class="notification-bell">
-        <i class="fas fa-bell"></i>
-    </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
 
 </body>
 </html>
